@@ -1,0 +1,65 @@
+object MainForm: TMainForm
+  Cursor = crArrow
+  Left = 928
+  Height = 240
+  Top = 443
+  Width = 320
+  Caption = 'ClipSync'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object ToggleBox1: TToggleBox
+    Cursor = crHandPoint
+    Left = 0
+    Height = 41
+    Top = 0
+    Width = 320
+    Align = alTop
+    Caption = 'ToggleBox1'
+    OnChange = ToggleBox1Change
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 8
+    Height = 28
+    Top = 80
+    Width = 304
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 176
+    Width = 136
+    Caption = 'Set filename'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 16
+    Top = 208
+    Width = 41
+    Caption = 'Label1'
+  end
+  object Label2: TLabel
+    Left = 18
+    Height = 16
+    Top = 57
+    Width = 112
+    Caption = 'Clipboard content:'
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 272
+    Top = 48
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 272
+    Top = 88
+  end
+end
